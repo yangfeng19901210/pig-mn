@@ -1,0 +1,13 @@
+server:
+  port: 2002
+spring:
+  application:
+    name: nacos-config-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.2.7:8848
+        file-extension: yaml
+        namespace: 3150fd7b-e1ec-4551-8911-5a3f68014c19

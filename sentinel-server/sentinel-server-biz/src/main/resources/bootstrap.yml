@@ -1,0 +1,55 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: sentinel-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#        namespace: dev
+#        group: test
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+        client-ip: 192.168.2.7
+      datasource:
+        flow-rules:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP   # 注意groupId对应Sentinel Dashboard中的定义
+            data-type: json
+            rule-type: flow
+        degrade-rules:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-degrade-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: degrade
+        param-flow-rules:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-param-flow-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: param-flow
+        authority-rules:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-authority-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: authority
+        system-rules:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-system-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: system
+feign:
+  sentinel:
+    enabled: true

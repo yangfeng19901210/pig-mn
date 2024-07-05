@@ -1,0 +1,9 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: feign-server2
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.2.7:8848

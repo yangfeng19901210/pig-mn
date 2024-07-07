@@ -167,11 +167,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <tagNameFormat>${project.version}</tagNameFormat>
-                    <releaseVersion>${project.version}</releaseVersion>
-                    <developmentVersion>${project.version}-SNAPSHOT</developmentVersion>
-                </configuration>
             </plugin>
         </plugins>
     </build>

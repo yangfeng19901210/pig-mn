@@ -1,0 +1,53 @@
+server:
+  port: 2004
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://192.168.2.27:3336/seata_order?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2b8
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: dsk806888@
+# 配置mybatis-plus的xml和bean的目录
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:  #逻辑删除配置
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+    refresh-mapper: true # 刷新mapper 调试神器
+  type-aliases-package: com.yf.entity
+# Seata 配置
+seata:
+  registry:
+    type: nacos
+    nacos:
+      # Nacos 服务地址
+      server-addr: ${spring.cloud.nacos.discovery.server-addr}
+      group: SEATA_GROUP
+      namespace: ""
+      application: seata-server # 必须和服务器配置一样
+  tx-service-group: my_seata_group # 自定义的事务组，名字可随意，但service.vgroup-mapping下一定要有一个对应你这个名字的映射
+  service:
+    vgroup-mapping:
+      my_seata_group: default # 必须和服务器配置一样
+  data-source-proxy-mode: AT
+  enabled: true
+# xxl-job配置
+xxl:
+  job:
+    accessToken: default_token
+    admin:
+      addresses: http://localhost:8080/xxl-job-admin
+    executor:
+      appname: xxl-job-executor-sample
+      ip:
+      port: 9999
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30

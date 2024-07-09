@@ -2,6 +2,7 @@ package com.yf.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
@@ -28,4 +29,7 @@ public class BaseEntity {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" )
     @TableField(value = "upt_time" , fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime uptTime;
+
+    @TableLogic
+    private Integer isDeleted;
 }

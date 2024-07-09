@@ -35,5 +35,13 @@ class StudentServiceImplTest {
         list.add(s5);
         studentService.saveBatch(list);
     }
+    @Test
+    public void getAll(){
+        studentService.list();
+    }
+    @Test
+    public void delete(){
+        studentService.removeById(1);
+    }
 
 }

@@ -3,6 +3,7 @@ package com.yf.task;
 import com.yf.data.DB;
 import com.yf.entity.Student;
 import com.yf.service.StudentService;
+import com.yf.util.DateTimeUtils;
 import io.gitee.loulan_yxq.owner.json.tool.JsonTool;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -36,7 +37,7 @@ public class RedissonTask {
         log.info("执行。。。");
     }
 
-    @Scheduled(cron = "0 0/10 * ? * *")
+    @Scheduled(cron = "0/30 * * ? * *")
     public void updateStatus(){
         log.info("执行更新状态");
         //获取所有用户数据
@@ -50,7 +51,7 @@ public class RedissonTask {
         try {
             b = lock.tryLock(3, 3, TimeUnit.SECONDS);
             if(b){
-                log.info("更新数据 data{} 的状态", JsonTool.toJson(entity));
+                log.info("数据{} 获取到锁的时间为 {}",JsonTool.toJson(entity), DateTimeUtils.getCurrentTime());
                 entity = studentService.getById(entity.getId());
                 if(entity.getStatus().equals(0)){
                     entity.setStatus(1);

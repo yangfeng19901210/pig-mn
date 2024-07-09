@@ -238,6 +238,10 @@ public class DateTimeUtils {
         return strArr;
     }
 
+    public static String getCurrentTime(){
+        return LocalDateTime.now().format(formatter);
+    }
+
 
 
 

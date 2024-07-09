@@ -16,6 +16,7 @@
         <module>sentinel-server</module>
         <module>seata-order-server</module>
         <module>seata-sku-server</module>
+        <module>redisson-server</module>
     </modules>
 
     <properties>

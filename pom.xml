@@ -74,10 +74,15 @@
     <repositories>
         <!-- maven私服地址       -->
         <repository>
-            <id>dsk-public</id>
-            <name>dsk-public</name>
-            <url>http://192.168.2.60:8081/repository/maven-public/</url>
+            <id>nexus-release</id>
+            <name>nexus-release</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
 
+        <repository>
+            <id>nexus-snapshots</id>
+            <name>nexus-snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </repository>
         <!--  阿里镜像仓库      -->
         <repository>
@@ -146,9 +151,41 @@
                        </execution>
                    </executions>
                </plugin>
+               <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-release-plugin</artifactId>
+                   <version>3.0.0-M1</version>
+                   <configuration>
+                       <tagNameFormat>${project.version}</tagNameFormat>
+                       <releaseVersion>${project.version}</releaseVersion>
+                       <developmentVersion>${project.version}-SNAPSHOT</developmentVersion>
+                   </configuration>
+               </plugin>
            </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
+    <scm>
+        <connection>scm:git:git://github.com/yangfeng19901210/pig-mn.git</connection>
+        <developerConnection>scm:git:ssh://github.com/yangfeng19901210/pig-mn.git</developerConnection>
+        <url>https://github.com/yangfeng19901210/pig-mn.git</url>
+        <tag>HEAD</tag>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 
 </project>

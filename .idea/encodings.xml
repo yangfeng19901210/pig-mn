@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/feign-server1/feign-server1-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server1/feign-server1-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server1/feign-server1-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server1/feign-server1-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server2/feign-server2-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server2/feign-server2-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-server2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-bom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-bom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/pig-mn-common-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pig-mn-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/order-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/order-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/order-server-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/order-server-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/sku-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/sku-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/sku-server-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/sku-server-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-sku-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/sentinel-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/sentinel-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/sentinel-server-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/sentinel-server-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
